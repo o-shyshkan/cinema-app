@@ -85,7 +85,7 @@ basic CRUD operations and use as storage MySQL database.
    "id":1,
    "email": "bob33@gmail.com"
    }
-3. Movie
+3. Movie,
    add new Movie
    
    POST http://localhost:8080/movies
@@ -109,7 +109,7 @@ basic CRUD operations and use as storage MySQL database.
    "title": "Terminator 1",
    "description": "Action movie"
    }
-5. Cinema Hall
+5. Cinema Hall,
       add new Cinema Hall
    
       POST http://localhost:8080/cinema-halls
@@ -134,7 +134,7 @@ basic CRUD operations and use as storage MySQL database.
       "capacity": 100,
       "description": "Yellow hall"
       }
-4. Movie Session
+4. Movie Session,
    add new Movie Session
    
    POST http://localhost:8080/movie-session
@@ -174,7 +174,7 @@ basic CRUD operations and use as storage MySQL database.
    Delete Movie Session by Id
    DELETE http://localhost:8080/movie-session/{id}
    Authorization: Basic user passwd
-5. Shoping Cart
+5. Shoping Cart,
    Add Movie session to the Shoping cart by movieSessionId
 
    PUT http://localhost:8080/shopping-carts/movie-sessions&movieSessionId=1
@@ -182,7 +182,7 @@ basic CRUD operations and use as storage MySQL database.
    Get shoping cart by userId
    GET http://localhost:8080/shopping-carts/by-user
    Authorization: Basic user passwd
-7. Order
+7. Order,
    Order complete by user
 
    POST http://localhost:8080/orders/complete
