@@ -103,6 +103,7 @@ basic CRUD operations and use as storage MySQL database.
    }
    
    get all movies
+
    GET http://localhost:8080/movies
    Response:
    {
@@ -156,6 +157,7 @@ basic CRUD operations and use as storage MySQL database.
    }
    
    Get available movie session by movie id and date
+   
    GET http://localhost:8080/movie-session/available?movieId=1&date='dd.MM.yyyy'
    {[{
     "movieSessionId": 1,
@@ -166,6 +168,7 @@ basic CRUD operations and use as storage MySQL database.
    }]}
 
    Update Movie Session by Id
+
    PUT http://localhost:8080/movie-session/{id}
    Authorization: Basic user passwd
    Content-Type: application/json
@@ -176,6 +179,7 @@ basic CRUD operations and use as storage MySQL database.
    }
 
    Delete Movie Session by Id
+
    DELETE http://localhost:8080/movie-session/{id}
    Authorization: Basic user passwd
 6. Shoping Cart,
@@ -185,6 +189,7 @@ basic CRUD operations and use as storage MySQL database.
    Authorization: Basic user passwd
 
    Get shoping cart by userId
+
    GET http://localhost:8080/shopping-carts/by-user
    Authorization: Basic user passwd
 8. Order,
@@ -199,7 +204,9 @@ basic CRUD operations and use as storage MySQL database.
    "userId":1,
    "orderTime":"LocalDateTime"
    }
+
    Get all orders by user
+
    GET http://localhost:8080/orders
    Authorization: Basic user passwd
    Response:
