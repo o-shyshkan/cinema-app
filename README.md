@@ -101,6 +101,7 @@ basic CRUD operations and use as storage MySQL database.
    "title": "Terminator 1",
    "description": "Action movie"
    }
+   
    get all movies
    GET http://localhost:8080/movies
    Response:
@@ -153,6 +154,7 @@ basic CRUD operations and use as storage MySQL database.
    "cinemaHallId": 1
    "showTime": "dd.MM.yyyy"
    }
+   
    Get available movie session by movie id and date
    GET http://localhost:8080/movie-session/available?movieId=1&date='dd.MM.yyyy'
    {[{
@@ -162,6 +164,7 @@ basic CRUD operations and use as storage MySQL database.
    "cinemaHallId": 1
    "showTime": "dd.MM.yyyy"
    }]}
+
    Update Movie Session by Id
    PUT http://localhost:8080/movie-session/{id}
    Authorization: Basic user passwd
@@ -171,18 +174,20 @@ basic CRUD operations and use as storage MySQL database.
    "cinemaHallId": 1
    "showTime": "dd.MM.yyyy"
    }
+
    Delete Movie Session by Id
    DELETE http://localhost:8080/movie-session/{id}
    Authorization: Basic user passwd
-5. Shoping Cart,
+6. Shoping Cart,
    Add Movie session to the Shoping cart by movieSessionId
 
    PUT http://localhost:8080/shopping-carts/movie-sessions&movieSessionId=1
    Authorization: Basic user passwd
+
    Get shoping cart by userId
    GET http://localhost:8080/shopping-carts/by-user
    Authorization: Basic user passwd
-7. Order,
+8. Order,
    Order complete by user
 
    POST http://localhost:8080/orders/complete
