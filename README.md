@@ -69,7 +69,7 @@ basic CRUD operations and use as storage MySQL database.
 12. To get all movies type url http://localhost:8080//movies
 13. There are 15 endpoint available that show below 
 
-14. ##**Description REST API of cinema-app:**
+##**Description REST API of cinema-app:**
 1. Register new user
     POST http://localhost:8080/register
     Authorization: Basic user passwd
