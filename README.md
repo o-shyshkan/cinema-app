@@ -217,8 +217,8 @@ basic CRUD operations and use as storage MySQL database.
    "orderTime":"LocalDateTime"
    }
 ## Links: ##
-- [Home](https://github.com/o-shyshkan/cinema-app/edit/main/README.md#cinema-app-oncoming_taxi)
-- [Features](https://github.com/o-shyshkan/cinema-app/edit/main/README.md#features)
-- [Structure](https://github.com/o-shyshkan/cinema-app/edit/main/README.md#structure)
-- [Technology](https://github.com/o-shyshkan/cinema-app/edit/main/README.md#technology)
-- [Getting-started](https://github.com/o-shyshkan/cinema-app/edit/main/README.md#getting-started)
+- [Home](https://github.com/o-shyshkan/cinema-app/main/README.md#cinema-app-oncoming_taxi)
+- [Features](https://github.com/o-shyshkan/cinema-app/main/README.md#features)
+- [Structure](https://github.com/o-shyshkan/cinema-app/main/README.md#structure)
+- [Technology](https://github.com/o-shyshkan/cinema-app/main/README.md#technology)
+- [Getting-started](https://github.com/o-shyshkan/cinema-app/main/README.md#getting-started)
