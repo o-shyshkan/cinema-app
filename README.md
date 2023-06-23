@@ -87,6 +87,7 @@ basic CRUD operations and use as storage MySQL database.
    }
 3. Movie
    add new Movie
+   
    POST http://localhost:8080/movies
    Authorization: Basic user passwd
    Content-Type: application/json
@@ -108,8 +109,9 @@ basic CRUD operations and use as storage MySQL database.
    "title": "Terminator 1",
    "description": "Action movie"
    }
-4. Cinema Hall
+5. Cinema Hall
       add new Cinema Hall
+   
       POST http://localhost:8080/cinema-halls
       Authorization: Basic user passwd
       Content-Type: application/json
@@ -123,7 +125,8 @@ basic CRUD operations and use as storage MySQL database.
       "capacity": 100,
       "description": "Yellow hall"
       }   
-5. Get all Cinema Hall 
+7. Get all Cinema Hall
+  
       GET http://localhost:8080/cinema-halls
       Response: 
       {
@@ -133,6 +136,7 @@ basic CRUD operations and use as storage MySQL database.
       }
 4. Movie Session
    add new Movie Session
+   
    POST http://localhost:8080/movie-session
    Authorization: Basic user passwd
    Content-Type: application/json
@@ -152,7 +156,7 @@ basic CRUD operations and use as storage MySQL database.
    Get available movie session by movie id and date
    GET http://localhost:8080/movie-session/available?movieId=1&date='dd.MM.yyyy'
    {[{
-5. "movieSessionId": 1,
+    "movieSessionId": 1,
    "movieId": 1,
    "movieTitle": "Terminator 1",
    "cinemaHallId": 1
@@ -172,13 +176,15 @@ basic CRUD operations and use as storage MySQL database.
    Authorization: Basic user passwd
 5. Shoping Cart
    Add Movie session to the Shoping cart by movieSessionId
+
    PUT http://localhost:8080/shopping-carts/movie-sessions&movieSessionId=1
    Authorization: Basic user passwd
    Get shoping cart by userId
    GET http://localhost:8080/shopping-carts/by-user
    Authorization: Basic user passwd
-6. Order
+7. Order
    Order complete by user
+
    POST http://localhost:8080/orders/complete
    Authorization: Basic user passwd
    Response:
