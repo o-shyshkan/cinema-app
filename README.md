@@ -71,6 +71,7 @@ basic CRUD operations and use as storage MySQL database.
 
 ##**Description REST API of cinema-app:**
 1. Register new user
+
     POST http://localhost:8080/register
     Authorization: Basic user passwd
     Content-Type: application/json
@@ -84,7 +85,7 @@ basic CRUD operations and use as storage MySQL database.
    "id":1,
    "email": "bob33@gmail.com"
    }
-2. Movie
+3. Movie
    add new Movie
    POST http://localhost:8080/movies
    Authorization: Basic user passwd
@@ -107,7 +108,7 @@ basic CRUD operations and use as storage MySQL database.
    "title": "Terminator 1",
    "description": "Action movie"
    }
-3. Cinema Hall
+4. Cinema Hall
       add new Cinema Hall
       POST http://localhost:8080/cinema-halls
       Authorization: Basic user passwd
@@ -122,7 +123,7 @@ basic CRUD operations and use as storage MySQL database.
       "capacity": 100,
       "description": "Yellow hall"
       }   
-4. Get all Cinema Hall 
+5. Get all Cinema Hall 
       GET http://localhost:8080/cinema-halls
       Response: 
       {
