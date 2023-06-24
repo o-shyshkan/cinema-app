@@ -69,9 +69,8 @@ basic CRUD operations and use as storage MySQL database.
 12. To get all movies type url http://localhost:8080//movies
 13. There are 15 endpoint available that show below 
 
-##**Description REST API of cinema-app:**
+14. ##**Description REST API of cinema-app:**
 1. Register new user
-
     POST http://localhost:8080/register
     Authorization: Basic user passwd
     Content-Type: application/json
@@ -85,9 +84,8 @@ basic CRUD operations and use as storage MySQL database.
    "id":1,
    "email": "bob33@gmail.com"
    }
-3. Movie,
+2. Movie
    add new Movie
-   
    POST http://localhost:8080/movies
    Authorization: Basic user passwd
    Content-Type: application/json
@@ -101,9 +99,7 @@ basic CRUD operations and use as storage MySQL database.
    "title": "Terminator 1",
    "description": "Action movie"
    }
-   
    get all movies
-
    GET http://localhost:8080/movies
    Response:
    {
@@ -111,9 +107,8 @@ basic CRUD operations and use as storage MySQL database.
    "title": "Terminator 1",
    "description": "Action movie"
    }
-5. Cinema Hall,
+3. Cinema Hall
       add new Cinema Hall
-   
       POST http://localhost:8080/cinema-halls
       Authorization: Basic user passwd
       Content-Type: application/json
@@ -127,8 +122,7 @@ basic CRUD operations and use as storage MySQL database.
       "capacity": 100,
       "description": "Yellow hall"
       }   
-7. Get all Cinema Hall
-  
+4. Get all Cinema Hall 
       GET http://localhost:8080/cinema-halls
       Response: 
       {
@@ -136,9 +130,8 @@ basic CRUD operations and use as storage MySQL database.
       "capacity": 100,
       "description": "Yellow hall"
       }
-4. Movie Session,
+4. Movie Session
    add new Movie Session
-   
    POST http://localhost:8080/movie-session
    Authorization: Basic user passwd
    Content-Type: application/json
@@ -155,20 +148,16 @@ basic CRUD operations and use as storage MySQL database.
    "cinemaHallId": 1
    "showTime": "dd.MM.yyyy"
    }
-   
    Get available movie session by movie id and date
-   
    GET http://localhost:8080/movie-session/available?movieId=1&date='dd.MM.yyyy'
    {[{
-    "movieSessionId": 1,
+5. "movieSessionId": 1,
    "movieId": 1,
    "movieTitle": "Terminator 1",
    "cinemaHallId": 1
    "showTime": "dd.MM.yyyy"
    }]}
-
    Update Movie Session by Id
-
    PUT http://localhost:8080/movie-session/{id}
    Authorization: Basic user passwd
    Content-Type: application/json
@@ -177,24 +166,18 @@ basic CRUD operations and use as storage MySQL database.
    "cinemaHallId": 1
    "showTime": "dd.MM.yyyy"
    }
-
    Delete Movie Session by Id
-
    DELETE http://localhost:8080/movie-session/{id}
    Authorization: Basic user passwd
-6. Shoping Cart,
+5. Shoping Cart
    Add Movie session to the Shoping cart by movieSessionId
-
    PUT http://localhost:8080/shopping-carts/movie-sessions&movieSessionId=1
    Authorization: Basic user passwd
-
    Get shoping cart by userId
-
    GET http://localhost:8080/shopping-carts/by-user
    Authorization: Basic user passwd
-8. Order,
+6. Order
    Order complete by user
-
    POST http://localhost:8080/orders/complete
    Authorization: Basic user passwd
    Response:
@@ -204,9 +187,7 @@ basic CRUD operations and use as storage MySQL database.
    "userId":1,
    "orderTime":"LocalDateTime"
    }
-
    Get all orders by user
-
    GET http://localhost:8080/orders
    Authorization: Basic user passwd
    Response:
