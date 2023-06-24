@@ -23,4 +23,9 @@ public class RoleServiceImpl implements RoleService {
         return roleDao.getByName(Role.RoleName.valueOf(roleName)).orElseThrow(
                 () -> new RuntimeException("Can't get role by name " + roleName));
     }
+
+    @Override
+    public boolean isExistRoleByName(String roleName) {
+        return roleDao.getByName(Role.RoleName.valueOf(roleName)).isPresent();
+    }
 }

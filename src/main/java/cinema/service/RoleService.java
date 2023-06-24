@@ -6,4 +6,6 @@ public interface RoleService {
     Role add(Role role);
 
     Role getByName(String roleName);
+
+    boolean isExistRoleByName(String roleName);
 }

@@ -22,7 +22,7 @@ basic CRUD operations and use as storage MySQL database.
 * config - configuration and security files for Spring Framework
 * controller - package for Spring controllers where defined end point ;
 * dao - package for DAO interface for MySQL database;
-* dto - package for data transfer models in separate folder for request and response; 
+* dto - package for data transfer models in separate folder for request and response;
 * exception - package for exceptions;
 * lib - package for validation email and password;
 * model - package for entity models: User, Ticket, Role, ShopingCart, Order, MovieSession, Movie, CinemaHall;
@@ -56,7 +56,7 @@ basic CRUD operations and use as storage MySQL database.
    db.url=jdbc:mysql://localhost:3306/cinema?serverTimezone=UTC
    db.user=USER_NAME
    db.password=USER_PASSWORD
-6. Check that pom.xml has this line <packaging>war</packaging>   
+6. Check that pom.xml has this line <packaging>war</packaging>
 7. In menu Run-Edit Configuration set up Run Configuration for Tomcat
    You need Tomcat version 9.0.58 or higher
    add artifacts taxi-service:war exploded
@@ -67,13 +67,14 @@ basic CRUD operations and use as storage MySQL database.
    With role USER - user_name: bob32@gmail.com user_password: 1234
 10. Make authentication on page http://localhost:8080/login with login and password above
 12. To get all movies type url http://localhost:8080//movies
-13. There are 15 endpoint available that show below 
+13. There are 15 endpoint available that show below
 
-14. ##**Description REST API of cinema-app:**
+##**Description REST API of cinema-app:**
 1. Register new user
-    POST http://localhost:8080/register
-    Authorization: Basic user passwd
-    Content-Type: application/json
+
+   POST http://localhost:8080/register
+   Authorization: Basic user passwd
+   Content-Type: application/json
    {
    "email": "bob33@gmail.com",
    "password": "1234",
@@ -84,8 +85,9 @@ basic CRUD operations and use as storage MySQL database.
    "id":1,
    "email": "bob33@gmail.com"
    }
-2. Movie
+3. Movie,
    add new Movie
+
    POST http://localhost:8080/movies
    Authorization: Basic user passwd
    Content-Type: application/json
@@ -99,7 +101,9 @@ basic CRUD operations and use as storage MySQL database.
    "title": "Terminator 1",
    "description": "Action movie"
    }
+
    get all movies
+
    GET http://localhost:8080/movies
    Response:
    {
@@ -107,31 +111,34 @@ basic CRUD operations and use as storage MySQL database.
    "title": "Terminator 1",
    "description": "Action movie"
    }
-3. Cinema Hall
-      add new Cinema Hall
-      POST http://localhost:8080/cinema-halls
-      Authorization: Basic user passwd
-      Content-Type: application/json
-      {
-      "capacity": 100,
-      "description": "Yellow hall"
-      }
-      Response:
-      {
-      "id": 1,
-      "capacity": 100,
-      "description": "Yellow hall"
-      }   
-4. Get all Cinema Hall 
-      GET http://localhost:8080/cinema-halls
-      Response: 
-      {
-      "id": 1,
-      "capacity": 100,
-      "description": "Yellow hall"
-      }
-4. Movie Session
+5. Cinema Hall,
+   add new Cinema Hall
+
+   POST http://localhost:8080/cinema-halls
+   Authorization: Basic user passwd
+   Content-Type: application/json
+   {
+   "capacity": 100,
+   "description": "Yellow hall"
+   }
+   Response:
+   {
+   "id": 1,
+   "capacity": 100,
+   "description": "Yellow hall"
+   }
+7. Get all Cinema Hall
+
+   GET http://localhost:8080/cinema-halls
+   Response:
+   {
+   "id": 1,
+   "capacity": 100,
+   "description": "Yellow hall"
+   }
+4. Movie Session,
    add new Movie Session
+
    POST http://localhost:8080/movie-session
    Authorization: Basic user passwd
    Content-Type: application/json
@@ -140,7 +147,7 @@ basic CRUD operations and use as storage MySQL database.
    "cinemaHallId": 1
    "showTime": "dd.MM.yyyy"
    }
-  Response:
+   Response:
    {
    "movieSessionId": 1,
    "movieId": 1,
@@ -148,16 +155,20 @@ basic CRUD operations and use as storage MySQL database.
    "cinemaHallId": 1
    "showTime": "dd.MM.yyyy"
    }
+
    Get available movie session by movie id and date
+
    GET http://localhost:8080/movie-session/available?movieId=1&date='dd.MM.yyyy'
    {[{
-5. "movieSessionId": 1,
+   "movieSessionId": 1,
    "movieId": 1,
    "movieTitle": "Terminator 1",
    "cinemaHallId": 1
    "showTime": "dd.MM.yyyy"
    }]}
+
    Update Movie Session by Id
+
    PUT http://localhost:8080/movie-session/{id}
    Authorization: Basic user passwd
    Content-Type: application/json
@@ -166,28 +177,36 @@ basic CRUD operations and use as storage MySQL database.
    "cinemaHallId": 1
    "showTime": "dd.MM.yyyy"
    }
+
    Delete Movie Session by Id
+
    DELETE http://localhost:8080/movie-session/{id}
    Authorization: Basic user passwd
-5. Shoping Cart
+6. Shoping Cart,
    Add Movie session to the Shoping cart by movieSessionId
+
    PUT http://localhost:8080/shopping-carts/movie-sessions&movieSessionId=1
    Authorization: Basic user passwd
+
    Get shoping cart by userId
+
    GET http://localhost:8080/shopping-carts/by-user
    Authorization: Basic user passwd
-6. Order
+8. Order,
    Order complete by user
+
    POST http://localhost:8080/orders/complete
    Authorization: Basic user passwd
    Response:
-  {
+   {
    "id":1,
    "ticketIds":[1,2,3],
    "userId":1,
    "orderTime":"LocalDateTime"
    }
+
    Get all orders by user
+
    GET http://localhost:8080/orders
    Authorization: Basic user passwd
    Response:
